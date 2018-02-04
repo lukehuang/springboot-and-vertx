@@ -26,4 +26,5 @@ fun main(args: Array<String>) {
     val ctx = SpringApplication.run(SpringbootAndVertxApplication::class.java, *args)
     val vertx = ctx.getBean("vertx") as Vertx
     vertx.deployVerticle(DemoVerticle())
+    vertx.deployVerticle(TcpVerticle(23456))
 }
