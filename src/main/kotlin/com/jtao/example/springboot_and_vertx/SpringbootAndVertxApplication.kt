@@ -23,8 +23,21 @@ class DemoVerticle: AbstractVerticle(){
 }
 
 fun main(args: Array<String>) {
+    var tcpPort = 23456
+    var webPort = 8080
+    if (args.size > 0) {
+        try {
+            tcpPort = args[0].toInt()
+        } catch (e:Exception){}
+    }
+    if (args.size > 1){
+        try {
+            webPort = args[1].toInt()
+        } catch (e:Exception){}
+    }
+
     val ctx = SpringApplication.run(SpringbootAndVertxApplication::class.java, *args)
     val vertx = ctx.getBean("vertx") as Vertx
     vertx.deployVerticle(DemoVerticle())
-    vertx.deployVerticle(TcpVerticle(23456))
+    vertx.deployVerticle(TcpVerticle(tcpPort, webPort))
 }

@@ -40,5 +40,8 @@ dependencies {
 	compile("org.jetbrains.kotlin:kotlin-stdlib-jdk8:${kotlinVersion}")
 	compile("org.jetbrains.kotlin:kotlin-reflect:${kotlinVersion}")
 	compile 'io.vertx:vertx-core:3.5.0'
+	compile 'io.vertx:vertx-mongo-client:3.5.0'
+	compile 'io.vertx:vertx-sockjs-service-proxy:3.5.0'
+	compile 'io.vertx:vertx-service-proxy:3.5.0'
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
