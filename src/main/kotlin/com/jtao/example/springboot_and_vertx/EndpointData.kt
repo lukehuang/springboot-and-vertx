@@ -4,7 +4,7 @@ data class Endpoint(val addr:Int, val channel:Int)
 
 data class EndpointData(
         var humidity:Int, var temperature:Int,
-        var longitide:Int, var latitude:Int) {
+        var longitide:String, var latitude:String) {
 }
 
 object Endpoints{
@@ -15,5 +15,8 @@ object Endpoints{
         } else {
             map[e] = d
         }
+    }
+    fun find(e:Endpoint): EndpointData? {
+        return map[e]
     }
 }

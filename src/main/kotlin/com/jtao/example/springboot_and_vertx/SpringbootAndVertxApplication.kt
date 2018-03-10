@@ -29,7 +29,7 @@ fun main(args: Array<String>) {
     var monitorDbHost:String = "111.230.197.145"
     var yunkongHost:String = "106.15.56.97"
     var yunkongPort:Int = 8989
-    var mqttHost:String = "localhost"
+    var mqttHost:String = "111.230.197.145"
     var mqttPort:Int = 1883
 
     if(args.size % 2 == 0) {
